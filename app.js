@@ -1,15 +1,14 @@
-// setTimeout(function() {
-//   console.log("3 secondes has passed");
-// }, 3000);
+// normal function statment
 
-// var time = 0;
-//
-// var timer = setInterval(function() {
-//               time += 2;
-//               console.log(time + " seconds has passed!");
-//               if(time > 5) {
-//                 clearInterval(timer)
-//               }
-//             }, 2000);
-console.log(__dirname);
-console.log(__filename);
+function sayHi() {
+  console.log('Hi');
+}
+
+// function expression
+
+var sayBye = function() {
+  console.log('Bye');
+}
+
+sayHi();
+sayBye();
