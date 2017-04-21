@@ -1,4 +1,10 @@
-var funcs = require('./funcs')
-var arr = ['node', 'is', 'hella', 'cool!']
-console.log(funcs.counter(arr));
-console.log(funcs.adder(funcs.pi, 50));
+var events = require('events');
+
+// element.on('click', function() {}); //Syntax
+var myEmitter = new events.EventEmitter();
+
+myEmitter.on('someEvent', function(msg) {
+  console.log(msg);
+});
+
+myEmitter.emit('someEvent', 'The event has been emitted!');
